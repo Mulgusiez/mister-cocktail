@@ -1,0 +1,9 @@
+<div class= "container text-center">
+  <h1>Cocktail's List</h1>
+  <% @cocktails.each do |cocktail| %>
+    <ul class= "text-left">
+      <li><%= cocktail.name %></li>
+      <hr>
+    </ul>
+  <% end %>
+</div>

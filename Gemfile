@@ -2,6 +2,10 @@ source 'https://rubygems.org'
 
 ruby '2.3.0'
 
+gem 'bootstrap-sass'
+gem 'font-awesome-sass'
+gem 'simple_form'
+gem 'autoprefixer-rails'
 gem 'rails', '4.2.5.2'
 gem 'pg', '~> 0.15'
 gem 'sass-rails', '~> 5.0'
