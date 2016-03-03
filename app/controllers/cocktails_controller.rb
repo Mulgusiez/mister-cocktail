@@ -17,17 +17,18 @@ class CocktailsController < ApplicationController
     if @cocktail.save
       redirect_to @cocktail
     else
-      redirect_to :new
+      render :new
     end
   end
+
   def destroy
-    @cocktail = Restaurant.destroy
+    @cocktail = Cocktail.destroy
     redirect_to :index
   end
 
 private
 
   def find_cocktail
-    @cocktail = Restaurant.find(params[:id])
+    @cocktail = Cocktail.find(params[:id])
   end
 end

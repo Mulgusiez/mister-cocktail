@@ -1,7 +1,19 @@
-<div class= "container text-center">
+<div class= "text-center">
   <h1>Cocktail</h1>
     <ul class= "text-left">
       <li><%= @cocktail.name %></li>
       <hr>
+      <% @cocktail.doses.each do |dose| %>
+        <ul class= "text-left">
+          <li>
+            <%= dose.description %>
+            of :
+            <%= dose.ingredient.name %>
+            <%= link_to 'Delete', dose_path(dose), :method => 'delete', :confirm => "You sure?" %>
+          </li>
+          <hr>
+        </ul>
+      <% end %>
     </ul>
+    <%= link_to 'Add Ingredient', new_cocktail_dose_path(@cocktail) %>
 </div>
