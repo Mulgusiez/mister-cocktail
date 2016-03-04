@@ -1,25 +1,18 @@
-<div class="navbar-wagon">
-  <!-- Logo -->
-  <%= link_to cocktails_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "http://www.newlike.fr/content-nl/uploads/2012/06/Depositphotos_5810946_XXL.jpg" %>
-  <% end %>
+<div class= "my-navbar">
+    <!-- Logo -->
+    <div class= "logo">
+      <%= link_to cocktails_path do %>
+        <%= image_tag "http://www.newlike.fr/content-nl/uploads/2012/06/Depositphotos_5810946_XXL.jpg" %>
+      <% end %>
+    </div>
 
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
-
+    <div class= "text-center">
+      <h3>Mister Cocktail</h3>
+    </div>
 
     <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "New Cocktail"), new_cocktail_path, class: "navbar-wagon-item navbar-wagon-button btn" %>
-  </div>
-
-  <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">All Cocktails</a></li>
-        <li><a href="#">New Cocktail</a></li>
-      </ul>
+    <div class= "item">
+      <%= link_to "New Cocktail", new_cocktail_path, class: "item btn" %>
     </div>
-  </div>
 </div>
+
