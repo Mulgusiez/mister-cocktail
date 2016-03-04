@@ -1,4 +1,33 @@
-/* -------------------------------------
- * CSS code specific to home page
- * (margin/padding adjustments)
- * ------------------------------------- */
+.padding-medium {
+  padding: 100px;
+}
+
+.padding-large {
+  padding: 150px;
+}
+
+.padding-down-medium {
+  padding-bottom: 100px;
+}
+
+body, h1, h2, h3 {
+  font-family: 'Poiret One', cursive;
+}
+
+.page-title {
+  position: fixed;
+  height: 80px;
+  background-color: white;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.container {
+  padding: 0px;
+  z-index: 0;
+}
+
+.main-div {
+  width: 100vw;
+}

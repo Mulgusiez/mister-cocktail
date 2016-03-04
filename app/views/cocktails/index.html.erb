@@ -1,9 +1,26 @@
 <div class= "text-center">
-  <h1>Cocktail's List</h1>
-  <% @cocktails.each do |cocktail| %>
-    <ul class= "text-left">
-      <li><%= link_to cocktail.name, cocktail %></li>
-      <hr>
-    </ul>
-  <% end %>
+  <div class="page-title">
+    <h1>Cocktail's List</h1>
+  </div>
+
+  <div class="padding-medium">
+    <% @cocktails.each do |cocktail| %>
+      <ul class= "text-left">
+        <li>
+          <% if cocktail.photo? %>
+            <%= cl_image_tag cocktail.photo.path, width: 20, height: 30, crop: :fill %>
+          <% end %>
+
+          <%= link_to cocktail.name, cocktail %>
+        </li>
+
+        <hr>
+      </ul>
+    <% end %>
+  </div>
+  <div class="row padding-medium">
+    <div>
+      <%= link_to "New Cocktail", new_cocktail_path, class: "btn" %>
+    </div>
+  </div>
 </div>

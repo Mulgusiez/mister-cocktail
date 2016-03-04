@@ -1,7 +1,12 @@
 <div class= "text-center">
-<h1>New Cocktail</h1>
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name, placeholder: 'What\'s your cocktail ?'%>
-  <%= f.button :submit %>
-<% end %>
+  <div class="page-title">
+    <h1>New Cocktail</h1>
+  </div>
+  <div class="padding-medium main-div">
+    <%= simple_form_for @cocktail do |f| %>
+      <%= f.input :name, placeholder: 'What\'s your cocktail ?'%>
+      <%= f.input :photo, as: :attachinary %>
+      <%= f.button :submit %>
+    <% end %>
+  </div>
 </div>
