@@ -22,8 +22,8 @@ class CocktailsController < ApplicationController
   end
 
   def destroy
-    @cocktail = Cocktail.destroy
-    redirect_to :index
+    @cocktail.destroy
+    redirect_to cocktails_path
   end
 
 private
